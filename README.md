@@ -1,2 +1,2 @@
 django project jenkins docker test
-slack alert
+slack deploy success alert 

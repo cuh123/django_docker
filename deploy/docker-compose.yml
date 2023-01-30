@@ -17,7 +17,7 @@ services:
     container_name: django_web
 
     command: gunicorn --bind 0.0.0.0:8080 config.wsgi:application
-    volums:
+    volumes:
       - ./static:/usr/src/app/staticfiles
     expose:
       - "8080"

@@ -1,0 +1,24 @@
+version: "2"
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80/tcp"
+    volums:
+      - ./nginx:/etc/nginx/conf.d
+      - ./static:/staticfiles
+    depends_on:
+      - django_web
+
+  django_web:
+    image: cuh123/docker_autotest:latest
+    container_name: django_web
+
+    command: gunicorn --bind 0.0.0.0:8080 django_docker.wsgi:application
+    volums:
+      - ./static:/usr/src/app/staticfiles
+    expose:
+      - "8080"
+

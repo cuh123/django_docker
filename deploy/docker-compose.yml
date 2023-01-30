@@ -16,7 +16,7 @@ services:
     image: cuh123/docker_autotest:latest
     container_name: django_web
 
-    command: gunicorn --bind 0.0.0.0:8080 django_docker.wsgi:application
+    command: gunicorn --bind 0.0.0.0:8080 config.wsgi:application
     volums:
       - ./static:/usr/src/app/staticfiles
     expose:

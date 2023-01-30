@@ -1,3 +1,3 @@
 django project jenkins docker test
 slack deploy success alert
-docker hub test7 
+docker hub test8 

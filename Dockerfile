@@ -9,7 +9,7 @@ RUN pip install gunicorn
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 8000
 
 # CMD ["./manage.py","runserver","8080"]
-CMD ["gunicorn", "pragmatic.wsgi", "--bind", "0.0.0.0:8080"]
+CMD ["gunicorn", "pragmatic.wsgi", "--bind", "0.0.0.0:8000"]

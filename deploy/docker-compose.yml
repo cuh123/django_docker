@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 
 services:
   nginx:
@@ -16,9 +16,9 @@ services:
     image: cuh123/docker_autotest:latest
     container_name: django_web
 
-    command: gunicorn --bind 0.0.0.0:8080 config.wsgi:application
+    command: gunicorn --bind 0.0.0.0:8000 config.wsgi:application
     volumes:
       - ./static:/usr/src/app/staticfiles
     expose:
-      - "8080"
+      - "8000"
 

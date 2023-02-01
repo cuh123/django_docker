@@ -1,4 +1,4 @@
 django project jenkins docker test
 slack deploy success alert
 docker hub deploy test setting
-ssh test32
+ssh test33

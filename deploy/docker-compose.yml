@@ -6,7 +6,6 @@ services:
     container_name: nginx
     ports:
       - "80:80/tcp"
-      - "443:443"
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - ./static:/staticfiles
